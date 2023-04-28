@@ -68,16 +68,16 @@ of MySQL workbench.
 
 Optional but also highly recommended: Create a virtual environment and pip install requirements.txt
 
-Useful cmd lines: *OPEN CMD LINE*
-                  cd Desktop
-                  mkdir virtualenvs
-                  cd virtualenvs
-                  python -m venv Pirate_Scheduler_venv
-                  cd Pirate_Scheduler_venv
-                  cd scripts
-                  activate.bat    <-----activates virtual environment
-                  mkdir programs
-                  cd programs
+Useful cmd lines: *OPEN CMD LINE*,
+                  cd Desktop,
+                  mkdir virtualenvs,
+                  cd virtualenvs,
+                  python -m venv Pirate_Scheduler_venv,
+                  cd Pirate_Scheduler_venv,
+                  cd scripts,
+                  activate.bat, <--activates virtual environment),
+                  mkdir programs,
+                  cd programs,
                   
                   *Git_Hub Files should then be downloaded or copied into the new folder you created*
                   Once these files live in the folder called "programs". 
