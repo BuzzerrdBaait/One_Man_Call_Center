@@ -48,12 +48,7 @@ time2=[]
 date2=[]
 time_selections=[]
 
-
-
 label_color_num_list=[]
-
-
-
 
 label1= tkinter.Label(width=labelwidths,bg=labelbgcolor,fg='black',text="Callers_Name")
 
@@ -74,7 +69,6 @@ entry1=tkinter.Entry(width=entrywidth, bg=labelbgcolor)
 entry2=tkinter.Text(root, bg="grey80", fg="black", height=7, width=65)
 entry3=tkinter.Text(root, bg="grey80", fg="black", height=7, width=65)
 
-#####################################################################################
 frame=Frame(root)
 frame2=Frame(root)
 frame3=Frame(root)
@@ -85,9 +79,6 @@ frame2.config(bg=background_color)
 frame3.config(bg=background_color)
 frame4.config(bg=background_color)
 
-
-
-
 def optionMenuSelected(value):
     time1.clear()
     print("selected",value, " @ timemenu1")
@@ -95,9 +86,8 @@ def optionMenuSelected(value):
 
 def DateMenuSelected(value):
     date1.clear()
-    print("selected",value, " @ datemenu1")
-    date1.append(value)
-
+    print("selected",value, " @ datemenu1")                #  Hey! I know this is kind of ugly! I just really like having the menu selections near the menu creation 
+    date1.append(value)                                    #  point in tkinter.
 
 def optionMenuSelected2(value):
     time2.clear()
@@ -109,11 +99,7 @@ def DateMenuSelected2(value):
     date2.clear()
     print("selected",value, " @ datemenu2")
     date2.append(value)
-
-
-
- 
-        
+     
 option = StringVar(frame,"Set Callback time")
 option2=StringVar(frame2,"Set Callback date")
 option3 = StringVar(frame3,"Set Callback time")
@@ -131,8 +117,7 @@ timemenu2.config(bg=labelbgcolor)
 datemenu2= OptionMenu(frame,option4, *daylist,command=DateMenuSelected2 )
 datemenu2.config(bg=labelbgcolor)
 
-
-############ PUT THESE IN ANOTHER FILE WHEN DONE  ###########################################
+############ PUT THESE IN ANOTHER FILE WHEN DONE  ###########################################   Hahaha just seeing this! Not gonna happen!
 def send_it():                                                                              #
     print("send it")                                                                        #
     custname=entry1.get()
@@ -167,8 +152,6 @@ def send_it():                                                                  
         time_selections.append(time_2_selection)
     except:
         print("No time in second section")
-
-
 
     now=datetime.datetime.now()
 
@@ -219,33 +202,28 @@ def clear_all():
 #####################################################################################
 entry4label=tkinter.Label(text='hello')
 
-
 entry6=tkinter.Entry(width=entrywidth, bg=labelbgcolor)
 
 #buttons
 sendbutton=tkinter.Button(frame2,width=15, bg=labelbgcolor, text='Press to send it!',command=send_it)
 clearbutton=tkinter.Button(frame2,width=15, bg=labelbgcolor, text='Press to clear all!',command=clear_all)
 
-
-
-
 Tableinfo=[]
 
 tableselection=[]
 options = []
 
-
-   
+  
 def writetofile(query):
+    """
+    be sure to update your filepath if you want to write queries to a file. This is super helpful for troubleshooting queries.
+    """
       #insert a file path here.
-    with open("C://Users//calca//Desktop//Data.txt", "a") as f:    #Its just nice to have
+    with open("C://Users//User1//Desktop//Data.txt", "a") as f:    #Its just nice to have
         f.write(query)                                         #a write to file.
         f.write('\n')                                         #incase I need to add
         f.close()                                              #functions it helps see
                                                                #the sql query.
-
-
-
 
 #####################################################################################################Creates header photo
 canvas = Canvas(root, width = 75, height = 180) 
@@ -263,12 +241,10 @@ def row_factor(input):
     temprow_list.append(row)
     return(print(temprow_list))
 
-
 row_factor(3)
 
 rownum=temprow_list[0]
 labelspacer=tkinter.Label(bg="#6F390A")
-
 
 tempcolumn_list=[]
 
@@ -278,11 +254,11 @@ def column_factor(input):
     tempcolumn_list.append(column)
     return(print(tempcolumn_list))
 
-
 column_factor(2)
 
 columnnum=tempcolumn_list[0]
 
+#placement of widgets starts here
 canvas.grid(row=0,column=0, sticky="nsew", padx=0, pady=5, columnspan=2)
 label1.grid(row=1, column=0, sticky="nsew", padx=20, pady=5)
 label2.grid(row=2, column=0, sticky="nsew", padx=20, pady=25)
@@ -294,9 +270,6 @@ label6.grid(row=6, column=0, sticky="nsew", padx=20, pady=5)
 entry1.grid(row=1, column=1, sticky="nsew", padx=5, pady=0)
 entry2.grid(row=2, column=1, sticky="nsew", padx=5, pady=0)
 entry3.grid(row=3, column=1, sticky="nsew", padx=5, pady=0)
-
-
-
 
 frame.grid(row=4,column=1,sticky="nsew", padx=5,pady=0)
 timemenu1.grid(row=4, column=1, sticky="nsew",padx=5)
@@ -363,12 +336,7 @@ def get_entry(event,entry):
 
 
 
-entry1.bind("<Return>", lambda event, entry=entry1: get_entry(event,entry))
-
-
-
-
-
+entry1.bind("<Return>", lambda event, entry=entry1: get_entry(event,entry))     #<----entry button binded with entry
 
 
 root.mainloop()
