@@ -10,21 +10,21 @@ I would reccomend downloading MySQL workbench (GUI for database). Here is the li
 
 Inside of your database, create two tables.
 
-Table Name: customer_calls
-Columns:    Customer_Name varchar(50) 
-            Time_Of_Call datetime 
-            Notes varchar(250) 
-            Callback_time datetime 
-            Callback_time_2 datetime 
+Table Name: customer_calls,
+Columns:    Customer_Name varchar(50), 
+            Time_Of_Call datetime, 
+            Notes varchar(250), 
+            Callback_time datetime, 
+            Callback_time_2 datetime, 
             id int AI PK
             
-Table 2 Name: order_info
-Columns:      Order_ID int AI PK 
-              Customer_Name varchar(45) 
-              Notes varchar(250) 
-              Customer_Paid float 
-              Date_Of_Purchase datetime 
-              Item_Purchased varchar(45) 
+Table 2 Name: order_info,
+Columns:      Order_ID int AI PK, 
+              Customer_Name varchar(45), 
+              Notes varchar(250), 
+              Customer_Paid float, 
+              Date_Of_Purchase datetime, 
+              Item_Purchased varchar(45), 
               Item_ID int
             
 Here are sql queries to save you time:
